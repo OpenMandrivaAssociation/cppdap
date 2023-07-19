@@ -1,0 +1,14 @@
+diff -up cppdap-dap-1.58.0-a/CMakeLists.txt.omv~ cppdap-dap-1.58.0-a/CMakeLists.txt
+--- cppdap-dap-1.58.0-a/CMakeLists.txt.omv~	2023-07-19 22:37:59.839547610 +0200
++++ cppdap-dap-1.58.0-a/CMakeLists.txt	2023-07-19 22:38:21.974760819 +0200
+@@ -226,8 +226,8 @@ endfunction(cppdap_set_target_options)
+ ###########################################################
+ 
+ # dap
+-add_library(cppdap STATIC ${CPPDAP_LIST})
+-set_target_properties(cppdap PROPERTIES POSITION_INDEPENDENT_CODE 1)
++add_library(cppdap SHARED ${CPPDAP_LIST})
++set_target_properties(cppdap PROPERTIES POSITION_INDEPENDENT_CODE 1 VERSION 0.0 SOVERSION 0)
+ 
+ cppdap_set_target_options(cppdap)
+ 
